@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>With Love, For You 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Petit+Formal+Script&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dark-romantic.css" />
+  <link rel="stylesheet" href="css/performance.css" />
+  <link rel="stylesheet" href="css/gpu-optimization.css" />
+  <!-- Device tier detection: runs synchronously so later scripts can read window.DeviceTier -->
+  <script src="js/device-tier-system.js"></script>
+</head>
+<body>
+
+  <!-- ===== GLOBAL CINEMATIC BACKGROUND (fixed, z=-10, one unified layer) ===== -->
+  <div id="global-bg-layer" aria-hidden="true"></div>
+
+  <!-- ===== INTRO SCENE ===== -->
+  <div id="intro-scene">
+    <canvas id="particle-canvas-intro"></canvas>
+    <div id="gift-wrapper">
+      <div id="gift-container" onclick="openGift()">
+        <div id="gift-box">
+          <div class="gift-lid">
+            <div class="ribbon-h"></div>
+            <div class="ribbon-v"></div>
+            <div class="bow">
+              <div class="bow-left"></div>
+              <div class="bow-right"></div>
+              <div class="bow-center"></div>
+            </div>
+          </div>
+          <div class="gift-body">
+            <div class="ribbon-body-h"></div>
+            <div class="ribbon-body-v"></div>
+          </div>
+        </div>
+        <p class="gift-hint">✨ tap to open ✨</p>
+      </div>
+      <div id="bloom-container"></div>
+    </div>
+    <div id="petal-rain-intro"></div>
+    <div id="intro-overlay"></div>
+  </div>
+
+  <!-- Fixed ambient layers — live at body level so they cover ALL sections -->
+  <div class="cinematic-vignette"></div>
+  <canvas id="particle-canvas"></canvas>
+  <div id="falling-petals"></div>
+
+  <!-- ===== MAIN WEBSITE ===== -->
+  <div id="main-site" class="hidden">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">a love letter in bloom</p>
+        <h1 class="hero-title">
+          <span class="line1">For You,</span>
+          <span class="line2 italic">My Everything</span>
+        </h1>
+        <p class="hero-sub">Every petal holds a whisper of how much you mean to me.</p>
+        <div class="hero-flowers">
+          <svg class="hero-flower" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="flower-group">
+              <ellipse cx="50" cy="30" rx="12" ry="22" fill="rgba(255,182,193,0.85)" class="petal p1"/>
+              <ellipse cx="50" cy="30" rx="12" ry="22" fill="rgba(255,182,193,0.85)" class="petal p2" transform="rotate(60,50,50)"/>
+              <ellipse cx="50" cy="30" rx="12" ry="22" fill="rgba(255,182,193,0.85)" class="petal p3" transform="rotate(120,50,50)"/>
+              <ellipse cx="50" cy="30" rx="12" ry="22" fill="rgba(255,192,203,0.85)" class="petal p4" transform="rotate(180,50,50)"/>
+              <ellipse cx="50" cy="30" rx="12" ry="22" fill="rgba(255,192,203,0.85)" class="petal p5" transform="rotate(240,50,50)"/>
+              <ellipse cx="50" cy="30" rx="12" ry="22" fill="rgba(255,192,203,0.85)" class="petal p6" transform="rotate(300,50,50)"/>
+              <circle cx="50" cy="50" r="10" fill="rgba(255,220,180,0.95)"/>
+            </g>
+          </svg>
+        </div>
+        <a href="#message" class="scroll-btn">
+          <span>Scroll to discover</span>
+          <div class="scroll-arrow">↓</div>
+        </a>
+      </div>
+      
+        
+        
+        
+      </div>
+    </section>
+
+    <!-- ===== MESSAGE ===== -->
+    <section id="message">
+      <div class="section-inner">
+        <div class="message-card glass">
+          <div class="card-flowers-top">
+            <span class="inline-flower">🌸</span>
+            <span class="inline-flower delay1">🌺</span>
+            <span class="inline-flower delay2">🌸</span>
+          </div>
+          <p class="msg-label">from my heart</p>
+          <h2 class="msg-title">You are my<br/><em>wildest dream</em><br/>come true.</h2>
+          
+          <p class="msg-body">Meisya,</p>
+          <p class="msg-body">Sebentar lagi kita lulus dan jalan kita bakal beda-beda. Makasih ya udah bikin hari-hari aku lebih semangat.</p>
+          <p class="msg-body">Maaf ya kalau aku dulu pernah tiba-tiba menghilang. Itu salah aku, dan jujur aku masih nyesel sampai sekarang. Aku masih kepikiran terus soal kebodohan aku waktu itu. Kalau aku nggak ngelakuin itu, mungkin aja kita pernah bahagia bersama. Mungkin ya, hehe.</p>
+          <p class="msg-body">
+Aku senang banget bisa kenal dan pernah bareng kamu, ya walaupun waktunya nggak lama.</p>
+          <p class="msg-body">Di SMA nanti pasti kita ketemu orang baru. Semoga kamu ketemu orang yang lebih baik, yang bisa jaga kamu dan bikin kamu bahagia.</p>
+          <p class="msg-body">Nama kamu nggak akan aku lupain. Meisya bakal selalu ada di bagian kenangan yang paling aku jaga.</p>
+          <div class="msg-signature">Jaga diri baik-baik ya di SMA nanti. </div>
+        </div>
+      </div>
+      <div class="section-petals">
+        <div class="s-petal sp1">🌸</div>
+        <div class="s-petal sp2">🌺</div>
+        <div class="s-petal sp3">🌼</div>
+        <div class="s-petal sp4">🌸</div>
+        <div class="s-petal sp5">🌷</div>
+      </div>
+    </section>
+
+  
+  <!-- Scripts — tier already set in <head>; engine files load in dependency order -->
+  <script src="js/render-loop.js"></script>
+  <script src="js/particle-pool.js"></script>
+  <script src="js/performance-manager.js"></script>
+  <script src="js/canvas-flower-engine.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/audio-system.js"></script>
+  <script src="js/intro.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
