@@ -14,8 +14,8 @@
 const playlist = [
   {
     id:        'song1',
-    title:     'Risk It All',
-    artist:    'Bruno Mars',
+    title:     'Shape of My Heart',
+    artist:    'Backstreet Boys',
     file:      'music/song1.mp3',
     cover:     'assets/music-cover/song1.jpeg',
     startTime: 0,       // seconds — where playback begins
